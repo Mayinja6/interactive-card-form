@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Interactive card details form</title>
+  </head>
+  <body>
+    <div class="cards_component">
+      <div class="cards_imgs_container">
+        <div class="cards_imgs">
+          <div class="card_img">
+            <div class="card_front_img">
+              <div class="card_front_img_content">
+                <div class="card_front_img_content_logo">
+                  <img src="./assets/card-logo.svg" alt="Card_Logo" />
+                </div>
+                <div class="card_front_img_content_number">
+                  <h3 title="Card Number">0000 0000 0000 0000</h3>
+                </div>
+                <div class="card_front_img_content_name">
+                  <p title="Card Owner Name">Joann Doe</p>
+                  <span title="Card Expiry Date">00/00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_img">
+            <div class="card_back_img">
+              <div class="card_back_img_content">
+                <span title="Card cvc">000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards_form_container">
+        <form class="cards_form">
+          <div>
+            <label htmlFor="card_form_name">Cardholder name</label>
+            <input
+              type="text"
+              class="card_form_name"
+              placeholder="e.g. Joann Doe"
+              name="card_form_name"
+              id="card_form_name"
+            />
+            <span class="errorMessage card_form_name_error"> </span>
+          </div>
+          <div>
+            <label htmlFor="card_form_number">Card number</label>
+            <input
+              type="text"
+              class="card_form_number"
+              placeholder="e.g. 0000 0000 0000 0000"
+              name="card_form_number"
+              id="card_form_number"
+              maxlength="16"
+            />
+            <span class="errorMessage card_form_number_error"> </span>
+          </div>
+          <div class="class_form_security">
+            <div>
+              <label htmlFor="card_form_month">exp. date (mm/yy)</label>
+              <div class="class_form_security_date_inputs">
+                <select
+                  type="text"
+                  class="card_form_month"
+                  placeholder="MM"
+                  name="card_form_month"
+                  id="card_form_month"
+                >
+                  <option value="" class="defaultOption"></option>
+                  <option value="01">Jan</option>
+                  <option value="02">Feb</option>
+                  <option value="03">Mar</option>
+                  <option value="04">Apr</option>
+                  <option value="05">May</option>
+                  <option value="06">Jun</option>
+                  <option value="07">Jul</option>
+                  <option value="08">Aug</option>
+                  <option value="09">Sep</option>
+                  <option value="10">Oct</option>
+                  <option value="11">Nov</option>
+                  <option value="12">Dec</option>
+                </select>
+
+                <input
+                  type="text"
+                  class="card_form_year"
+                  placeholder="YY"
+                  name="card_form_year"
+                  id="card_form_year"
+                  maxlength="2"
+                />
+              </div>
+              <span
+                class="errorMessage class_form_security_date_inputs_error"
+              ></span>
+            </div>
+            <div>
+              <label htmlFor="card_form_cvc">cvc</label>
+              <input
+                type="text"
+                class="card_form_cvc"
+                placeholder="e.g. 123"
+                name="card_form_cvc"
+                id="card_form_cvc"
+                maxlength="3"
+              />
+              <span class="errorMessage card_form_cvc_error"></span>
+            </div>
+          </div>
+          <button type="submit" class="card_submit_button">Confirm</button>
+        </form>
+      </div>
+      <div class="cards_success_submit">
+        <div class="cards_success_submit_content">
+          <img src="./assets/icon-complete.svg" alt="Completed" />
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="card_submit_button">Continue</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by
+        <a href="https://www.github.com/Mayinja6" target="_blank"> Mayinja6 </a>
+        .
+      </div>
+    </div>
+  </body>
+</html>
